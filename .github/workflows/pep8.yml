@@ -33,9 +33,10 @@ jobs:
         run: pytest my_test.py
 
       - name: Run Static Analysis 
-        run: pylint hw2_debugging.py > post_traces/pylint_debugging_output.log
-             pylint rand.py > post_traces/pylint_rand_output.log
-             pyright hw2_debugging.py > post_traces/pyright_debugging_output.log
-             pyright rand.py > post_traces/pyright_rand_output.log
-             bandit hw2_debugging.py > post_traces/bandit_debugging_output.log
-             bandit rand.py > post_traces/bandit_rand_output.log
+        run: |
+          pylint hw2_debugging.py > post_traces/pylint_debugging_output.log
+          pylint rand.py > post_traces/pylint_rand_output.log
+          pyright hw2_debugging.py > post_traces/pyright_debugging_output.log
+          pyright rand.py > post_traces/pyright_rand_output.log
+          bandit hw2_debugging.py > post_traces/bandit_debugging_output.log
+          bandit rand.py > post_traces/bandit_rand_output.log
