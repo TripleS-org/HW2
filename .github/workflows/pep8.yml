@@ -18,23 +18,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.12'  # Replace with your Python version
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
           pip install autopep8
+          pip install pytest
 
       - name: Run autopep8
         run: |
           autopep8 --in-place --aggressive --aggressive --recursive -v .
 
-      - name: Commit changes
-        if: github.event_name == 'push'
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "github-actions"
-          git add .
-          git commit -m "Apply autopep8 formatting" || echo "No changes to commit"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test with pytest
+        run: pytest my_test.py
+
+      - name: Run Static Analysis 
+        run: pylint hw2_debugging.py > post_traces/pylint_debugging_output.log
+             pylint rand.py > post_traces/pylint_rand_output.log
+             pyright hw2_debugging.py > post_traces/pyright_debugging_output.log
+             pyright rand.py > post_traces/pyright_rand_output.log
+             bandit hw2_debugging.py > post_traces/bandit_debugging_output.log
+             bandit rand.py > post_traces/bandit_rand_output.log
