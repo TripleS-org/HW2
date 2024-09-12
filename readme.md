@@ -9,4 +9,7 @@ Homework repository for CSC510 "Software Engineering"
 [![Autopep8 Formatting](https://github.com/TripleS-org/HW2/actions/workflows/pep8.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/pep8.yml)
 [![Bandit Security Analysis](https://github.com/TripleS-org/HW2/actions/workflows/bandit.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/bandit.yml)
 [![Pylint Static Analysis](https://github.com/TripleS-org/HW2/actions/workflows/pylint.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/pylint.yml)
-[![Pyright Type Checking](https://github.com/TripleS-org/HW2/actions/workflows/pyright.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/pyright.yml)
+[![Pyright Type Checking](https://github.com/TripleS-org/HW2/actions/workflows/pyright.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/pyright.yml)  
+
+  
+[![Merge Sort Test (Windows)](https://github.com/TripleS-org/HW2/actions/workflows/merge_sort_test.yml/badge.svg)](https://github.com/TripleS-org/HW2/actions/workflows/merge_sort_test.yml)
